@@ -1,0 +1,14 @@
+{
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": "/home/ricardo/www/Examen1"
+        }
+    ],
+    "settings": {
+        "xdebug": {
+             "url": "http://localhost/Examen1"
+        }
+    }
+}
