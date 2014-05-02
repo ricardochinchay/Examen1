@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <a class="brand" href="#" name="top">Aplicacion para Administrador</a>
           <ul class="nav">
-            <li><a href="#"><i class="icon-home"></i> Home</a></li>
+            <li><a href="#"><i class="icon-home"></i> Home Administrador</a></li>
             <li class="divider-vertical"></li>
           </ul>
           <div class="btn-group pull-right">
@@ -15,6 +15,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a data-toggle="modal" href="#myModal"><i class="icon-user"></i> Nuevo Usuario</a></li>
+              <li><a data-toggle="modal" href="<?php echo base_url() ?>examenes/mostrar_principal"><i class="icon-folder-close"></i> Preparar Examen</a></li>
               <li class="divider"></li>
               <li><a href="<?php echo base_url() ?>login/logout_user"><i class="icon-share"></i> Salir</a></li>
             </ul>
@@ -32,7 +33,7 @@
   <div class="container">
 
     <!-- Left Column -->
-    <div class="span5 offset1">
+    <div class="span3">
 
       <!-- User Info -->
       <div class="row well userInfo">
@@ -50,19 +51,10 @@
         </div>
       </div>
 
-
-      <!-- Message Box -->
-      <div class="row well">
-        <textarea class="span4" id="txtNewMessage" name="txtNewMessage"
-                  placeholder="Escriba su mensaje" rows="5"></textarea>
-        <h6 class="pull-right"><span id="spanNumChars">320</span> caracteres restantes</h6>
-        <button id="btnPost" class="btn btn-info">Postear Mensaje</button>
-      </div>
-
       </div> <!-- End Left Column -->
 
       <!-- Right Column -->
-      <div class="span4 offset1">
+      <div class="span7 offset1">
       <div class="row">
         <?php if ( isset($other_posts) ) : ?>
           <h4>What Others are Saying:</h4>
@@ -85,7 +77,8 @@
             </div>
         <?php else : ?>
           <div>
-            <h4>There are no messages from other users!</h4>
+            <h4>Sistema de Gestion de Examenes</h4>
+            Aqui se mostraran las notificaciones del sistema.
           </div>
         <?php endif; ?>
       </div><!-- row -->
@@ -128,18 +121,6 @@
             <option value="c">C</option>
           </select>
         </p>
-        <!--
-        <p>
-          <label class="radio span4">
-            <input type="radio" id="sexo_f" name="sexo" value="2" checked> Femenino
-          </label>
-        </p>
-        <p>
-          <label class="radio span4">
-            <input type="radio" id="sexo_m" name="sexo" value="1"> Masculino
-          </label>
-        </p>
-        -->
         <p>
           <select class="span4" name="sexo" id="sexo">
             <option value="2">Femenino</option>

@@ -20,10 +20,10 @@ class login extends CI_Controller {
 
         //Me aseguro que el dni, el password existan y sea valido el usuario
         if( $dni && $pass && $this->user_m->validate_user($dni,$pass) ) {
-            // If the user is valid, redirect to the main view
+            // En caso de ser un usuario valido mando la vista principal
             redirect('/principal/mostrar_principal');
         } else {
-            // Otherwise show the login screen with an error message.
+            // De otra manera muestro la vista login con un mensaje de error
             $this->show_login(true);
         }
     }

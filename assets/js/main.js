@@ -200,6 +200,7 @@ $(function () {
     newUserCreated : function(response) {
       if ( response ) {
         App.$modalWindow.modal('hide');
+        alert("Usuario Agregado satisfactoriamente!!");
       }
       // TODO: if response not true, show server validation errors
     },

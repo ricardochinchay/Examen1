@@ -27,18 +27,18 @@ class user_m extends CI_Model {
     }
 
     function set_session() {
-        // session->set_userdata is a CodeIgniter function that
+        // session->set_userdata es una funcion de Codeigniter que almacena la informacion de la sesion
         // stores data in CodeIgniter's session storage.  Some of the values are built in
         // to CodeIgniter, others are added.  See CodeIgniter's documentation for details.
         $this->session->set_userdata( array(
-                'dni'=>$this->details->dni,
-                'nombre'=> $this->details->nombre . ' ' . $this->details->apellido1 . ' ' . $this->details->apellido2,
-                'grado'=>$this->details->grado,
-                'seccion'=>$this->details->seccion,
-                'avatar'=>$this->details->avatar,
-                'sexo'=>$this->details->sexo,
-                'isAdmin'=>$this->details->isAdmin,
-                'isLoggedIn'=>true
+                'dni'        =>$this->details->dni,
+                'nombre'     => $this->details->nombre . ' ' . $this->details->apellido1 . ' ' . $this->details->apellido2,
+                'grado'      =>$this->details->grado,
+                'seccion'    =>$this->details->seccion,
+                'avatar'     =>$this->details->avatar,
+                'sexo'       =>$this->details->sexo,
+                'isAdmin'    =>$this->details->isAdmin,
+                'isLoggedIn' =>true
             )
         );
     }
@@ -56,13 +56,13 @@ class user_m extends CI_Model {
 
       return $this->db->insert('usuarios',$data);
     }
-
+/*
     public function update_tagline( $user_id, $tagline ) {
       $data = array('tagline'=>$tagline);
       $result = $this->db->update('user', $data, array('id'=>$user_id));
       return $result;
     }
-
+*/
     private function obtenerAvatar($sexo)
     {
       $avatar_names = array();
@@ -77,7 +77,7 @@ class user_m extends CI_Model {
       }
       
     }
-
+    /*
     private function getAvatar() {
       $avatar_names = array();
 
@@ -88,4 +88,5 @@ class user_m extends CI_Model {
 
       return $avatar_names[array_rand($avatar_names)];
     }
+    */
 }
